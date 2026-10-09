@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Daksh Bhatia — Mechanical Engineering Portfolio</title>
+<meta name="description" content="Daksh Bhatia, mechanical engineering student at the University of Washington: robotic arm, gyroscopic drone test stand, composite submarine hull.">
+<meta property="og:title" content="Daksh Bhatia — Mechanical Engineering Portfolio">
+<meta property="og:description" content="Robotic arm, gyroscopic drone test stand and composite submarine hull, built at the University of Washington.">
+<meta property="og:image" content="images/arm-full.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚙️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="role">Mechanical engineering, University of Washington</p>
+      <h1 class="name"><span>Daksh</span><span>Bhatia</span></h1>
+      <p class="intro">I design, build and test hardware: carbon fiber structures, drone test rigs and a robotic arm I'm building from scratch.</p>
+      <p class="now"><b>Now</b><span>Project lead on the UW Autonomous Flight Team, leading a team of five to design, manufacture and test a quadcopter under fixed budget and design constraints, the first stage of the team's drone swarm project.</span></p>
+      <div class="ctas">
+        <a class="btn primary" href="resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg>Resume</a>
+        <a class="btn" href="https://www.linkedin.com/in/dakshbhatia7" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V21h-4v-5c0-1.2-.02-2.73-1.66-2.73-1.67 0-1.92 1.3-1.92 2.65V21h-4z"/></svg>LinkedIn</a>
+        <a class="btn" href="mailto:dakshb07@uw.edu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 6 9 7 9-7"/></svg>Email</a>
+      </div>
+    </div>
+
+    <figure class="annot" aria-label="Robotic arm CAD with callouts: 50 cm reach, 110 g payload, 5 degrees of freedom">
+      <img src="images/arm-full.jpg" alt="SolidWorks render of Daksh's 5-DOF robotic arm">
+      <svg class="lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <path class="c1" d="M44 16 L22 16 L14 24"/>
+        <path class="c2" d="M64 52 L80 52 L86 44"/>
+        <path class="c3" d="M58 80 L76 80 L84 88"/>
+      </svg>
+      <span class="dot c1" style="left:44%;top:16%"></span>
+      <span class="dot c2" style="left:64%;top:52%"></span>
+      <span class="dot c3" style="left:58%;top:80%"></span>
+      <span class="lab c1" style="left:3%;top:25%"><b>110 g</b>payload</span>
+      <span class="lab c2" style="right:3%;top:31%"><b>50 cm</b>reach</span>
+      <span class="lab c3" style="right:3%;top:86%"><b>5 DOF</b>+ gripper</span>
+    </figure>
+  </div>
+</header>
+
+<main class="wrap">
+
+<nav class="index" aria-label="Projects">
+  <a class="card" href="#arm"><div class="thumb"><img src="images/gripper.jpg" alt=""></div><div class="meta"><strong>5-DOF Robotic Arm</strong><small>Personal project, in progress</small><span class="metric">50 cm reach, 110 g payload</span></div></a>
+  <a class="card" href="#stand"><div class="thumb"><img src="images/mounting-plate.jpg" alt=""></div><div class="meta"><strong>Gyroscopic Test Stand</strong><small>UW Autonomous Flight Team</small><span class="metric">One plate, 4 drone designs</span></div></a>
+  <a class="card" href="#hull"><div class="thumb"><img src="images/hull-cad.jpg" alt=""></div><div class="meta"><strong>Composite Submarine Hull</strong><small>UW Human Powered Submarine</small><span class="metric">3rd overall, 2.21 knots</span></div></a>
+</nav>
+
+<!-- Robotic arm -->
+<section class="project" id="arm">
+  <div class="p-head">
+    <div>
+      <p class="p-team">Personal project</p>
+      <h2 class="p-title">5-DOF Robotic Arm</h2>
+      <p class="lede">An Arduino-controlled arm with five degrees of freedom and a geared gripper, designed to reach 50 cm and lift a 110 g payload. Each joint is driven manually by its own potentiometer.</p>
+    </div>
+    <dl class="tblock">
+      <dt>Status</dt><dd><span class="status">In progress</span></dd>
+      <dt>Specs</dt><dd>50 cm reach, 110 g payload, 5 DOF plus gripper</dd>
+      <dt>Hardware</dt><dd>4 × DS3218 servos, 2 × SG90 servos, 6 potentiometers, Arduino Uno, 6 V 5 A supply</dd>
+      <dt>Tools</dt><dd>SolidWorks, 3D printing, Arduino, Tinkercad</dd>
+      <dt>Done so far</dt><dd>CAD complete, parts printing, electronics ordered, control code written</dd>
+    </dl>
+  </div>
+
+  <div class="feature">
+    <figure class="annot" aria-label="Gripper CAD with callout">
+      <img src="images/gripper.jpg" alt="Geared parallel-link gripper CAD">
+      <svg class="lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M52 32 L70 14 L80 14"/></svg>
+      <span class="dot" style="left:52%;top:32%"></span>
+      <span class="lab" style="left:70%;top:5%"><b>1 servo</b>drives both jaws</span>
+    </figure>
+    <div class="notes">
+      <div class="motive"><h3>Why I'm building it</h3><p>During my manufacturing internship at Racing Force Group, I watched plant workers spend hours on repetitive tasks like sorting screws. This arm is my first step toward automating that kind of work.</p></div>
+      <h3 style="margin-top:1.5rem">Challenges</h3>
+      <p>Designing the gripper around its servo, accounting for range of motion and interference with the linkages, then laying out wiring where every servo responds reliably to its own potentiometer.</p>
+      <h3>Next steps</h3>
+      <p>Assemble the printed linkages and electronics, then test each joint and the gripper under load.</p>
+    </div>
+  </div>
+
+  <div class="feature" style="grid-template-columns:minmax(0,1fr) minmax(0,1.7fr)">
+    <figure class="fig"><button type="button" aria-label="Enlarge: gripper, opposite side"><img src="images/gripper-back.jpg" alt="Gripper from the opposite side" loading="lazy"></button><figcaption>Gripper from the servo side. Meshed gears keep the jaws in sync.</figcaption></figure>
+    <figure class="fig schem"><button type="button" aria-label="Enlarge: wiring schematic"><img src="images/wiring-schematic.jpg" alt="Tinkercad wiring schematic with six servos, six potentiometers and an Arduino Uno" loading="lazy"></button><figcaption>Wiring schematic in Tinkercad: six servos, six potentiometers, Arduino Uno, 6 V 5 A supply.</figcaption></figure>
+  </div>
+</section>
+
+<!-- Test stand -->
+<section class="project" id="stand">
+  <div class="p-head">
+    <div>
+      <p class="p-team">UW Autonomous Flight Team, Test Stand subteam</p>
+      <h2 class="p-title">Gyroscopic Test Stand</h2>
+      <p class="lede">I designed and manufactured the drone mounting plate and bearing subsystem for a 3-axis gyroscopic test stand, so the team can test flight patterns and tune flight controllers without risking a crash.</p>
+    </div>
+    <dl class="tblock">
+      <dt>Status</dt><dd><span class="status">Built and tested</span></dd>
+      <dt>My part</dt><dd>Drone mounting plate and bearing subsystem</dd>
+      <dt>Plate</dt><dd>3 mm carbon fiber, 16 plies of prepreg, press-cured and waterjet cut</dd>
+      <dt>Fits</dt><dd>4 drone designs: small quadcopter, package-delivery octocopter, high-speed drone, X-frame quadcopter</dd>
+      <dt>Tools</dt><dd>SolidWorks, heated platen press, waterjet, 3D printing</dd>
+      <dt>Result</dt><dd class="result">Flight-tested an autonomous quadcopter on the stand, giving the team usable data for PID tuning</dd>
+    </dl>
+  </div>
+
+  <div class="feature">
+    <figure class="annot" aria-label="Mounting plate CAD with callout">
+      <img src="images/mounting-plate.jpg" alt="Slotted carbon fiber mounting plate CAD">
+      <svg class="lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><path d="M30 74 L30 88 L44 88"/><path d="M64 52 L80 52 L86 70"/></svg>
+      <span class="dot" style="left:30%;top:74%"></span>
+      <span class="dot" style="left:64%;top:52%"></span>
+      <span class="lab" style="left:45%;top:82%"><b>3 mm</b>16-ply carbon prepreg</span>
+      <span class="lab" style="right:2%;top:71%"><b>4 drones</b>one plate fits all</span>
+    </figure>
+    <div class="notes">
+      <h3>Challenges</h3>
+      <p>One plate had to hold all four of the team's drone designs: a small quadcopter, a package-delivery octocopter, a high-speed drone and an X-frame quadcopter. I worked with each subteam on frame shape, size and mounting points, without compromising low-friction rotation on the stand.</p>
+      <h3>What I learned</h3>
+      <p>Designing for multi-fit compatibility, laying up and press-curing my own carbon fiber plate from prepreg, waterjet cutting, and assembling a subsystem that produces measurable results.</p>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <figure class="fig"><button type="button" aria-label="Enlarge: gimbal ring CAD"><img src="images/gimbal-cad.jpg" alt="CAD of the gimbal rings and mounting plate" loading="lazy"></button><figcaption>Final CAD of the gimbal rings and plate (frame not shown).</figcaption></figure>
+    <figure class="fig"><button type="button" aria-label="Enlarge: built test stand"><img src="images/test-stand-photo.jpg" alt="The assembled test stand on a workbench" loading="lazy"></button><figcaption>The built stand, carbon plate at the center.</figcaption></figure>
+    <figure class="fig"><button type="button" aria-label="Enlarge: bearing block"><img src="images/bearing-block.jpg" alt="Bearing block and clevis CAD" loading="lazy"></button><figcaption>Bearing block and clevis carrying one rotation axis.</figcaption></figure>
+  </div>
+</section>
+
+<!-- Hull -->
+<section class="project" id="hull">
+  <div class="p-head">
+    <div>
+      <p class="p-team">UW Human Powered Submarine, Hull and Drivetrain team</p>
+      <h2 class="p-title">Composite Submarine Hull</h2>
+      <p class="lede">I fabricated a fiberglass prototype to validate our layup technique, then manufactured the final carbon fiber tail cone by wet layup, following a NACA 65-025 profile.</p>
+    </div>
+    <dl class="tblock">
+      <dt>Status</dt><dd><span class="status">Raced</span></dd>
+      <dt>Profile</dt><dd>NACA 65-025</dd>
+      <dt>Mold</dt><dd>CNC-machined PET foam</dd>
+      <dt>Tools</dt><dd>SolidWorks, wet fiberglass and carbon layup, epoxy mixing, mold release, sanding</dd>
+      <dt>Result</dt><dd class="result">3rd overall at the European International Submarine Races, top speed 2.21 knots</dd>
+    </dl>
+  </div>
+
+  <div class="feature">
+    <figure class="fig" style="margin:0"><button type="button" aria-label="Enlarge: submarine at competition"><img src="images/sub-competition.jpg" alt="The purple UW submarine at competition"></button><figcaption>The finished submarine at competition.</figcaption></figure>
+    <div class="notes">
+      <h3>Challenges</h3>
+      <p>Controlling resin distribution and keeping air pockets out of the layup, so no surface defects formed after curing.</p>
+      <h3>What I learned</h3>
+      <p>How to lay up carbon fiber and fiberglass structures while controlling resin, and how a prototype layup de-risks the final part.</p>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <figure class="fig"><button type="button" aria-label="Enlarge: hull CAD"><img src="images/hull-cad.jpg" alt="Team CAD model of the hull" loading="lazy"></button><figcaption>Team CAD model of the hull assembly.</figcaption></figure>
+    <figure class="fig"><button type="button" aria-label="Enlarge: fiberglass prototype"><img src="images/fiberglass-prototype.jpg" alt="Fiberglass layup on a foam mold" loading="lazy"></button><figcaption>Fiberglass prototype on the CNC-machined foam mold.</figcaption></figure>
+    <figure class="fig"><button type="button" aria-label="Enlarge: carbon tail cone"><img src="images/tail-cone-carbon.jpg" alt="Carbon fiber tail cone curing" loading="lazy"></button><figcaption>Carbon tail cone curing, before trimming.</figcaption></figure>
+    <figure class="fig"><button type="button" aria-label="Enlarge: mixing epoxy"><img src="images/epoxy-mixing.jpg" alt="Daksh mixing epoxy at a workbench" loading="lazy"></button><figcaption>Mixing epoxy for the layup.</figcaption></figure>
+    <figure class="fig"><button type="button" aria-label="Enlarge: clamp spacer"><img src="images/clamp-spacer.jpg" alt="Clamp spacer CAD" loading="lazy"></button><figcaption>Clamp spacer I designed to join the hull's upper and lower halves.</figcaption></figure>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h2>Let's build nothing.</h2>
+      <p>Looking for internships and project teams where I can design, build and test real hardware.</p>
+      <p class="fine">Daksh Bhatia, University of Washington, Seattle</p>
+    </div>
+    <div class="ctas">
+      <a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <a class="btn" href="https://www.linkedin.com/in/dakshbhatia7" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="mailto:dakshb07@uw.edu">dakshb07@uw.edu</a>
+    </div>
+  </div>
+</footer>
+
+<dialog id="lb" aria-label="Image viewer"><button class="close" type="button">Close</button><img alt=""><p></p></dialog>
+<script src="script.js"></script>
+</body>
+</html>
